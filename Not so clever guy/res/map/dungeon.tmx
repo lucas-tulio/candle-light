@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="30" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="cobbles2" tilewidth="16" tileheight="16">
+  <image source="cobbles2.png" width="162" height="224"/>
+ </tileset>
+ <tileset firstgid="141" name="wall2_1 copy alpha" tilewidth="16" tileheight="16">
+  <image source="wall2_1 copy alpha.png" width="280" height="224"/>
+  <tile id="85">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="91">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="94">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="95">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="106">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="107">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="108">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="109">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="119">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="121">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="125">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="136">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="137">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="139">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="140">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="141">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="142">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="144">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="145">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="146">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzFlt0OwiAMhXlazeQCh3qxqfNm/r21XcISQiiFFubFl0XF9vQU6LRSSm9ABxw2yuVzAs7ApYHeawMfQr19I/8tIwZHC8f/lEccDQaJY4LfMK2YnkHx9kCuzynvLKOHJoFUaxh/B+yD2GHvJHkxjpE8sZy1+zYmYlJ1doTmFDPwJPJi+4R7N1L9j61rcU58DbX2ki3oRUlOqn6/R9SMwPJy7nRdkLe05ty1OTMv556qMSsxD21h7TVYtYRnjFO/xBvj/j+6zzfgDkzAQ1jjRORdnrN7voA38AG+jTyP+Zt7rvrCtbXe7aS9TvVAAuaF9J1jZZl7g8LnH/Z9LVrH/wc/Q+V8cg==
+  </data>
+ </layer>
+ <layer name="Walls" width="30" height="30">
+  <properties>
+   <property name="blocked" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzNVrsOwjAMNGO6s1SiH8H//w0bsBbKRhGOOFmXODXlMViGxOnl7HOSbiNyEpFB/UGe/jhbP4/d1Gd7xOW5SV7zg84fSXwPc2n2+9k69SUbpTyXnHlmva57BzfzWIK7D+DmvNbibQxbk3S819oyLrimJa+WC+OWNv7+R9CJx4XVLv8/S30vtTxbvox/K18c8/hYHKYrO8ZiLK63JtI3UT3b+F/g4jlka1E6o/CsQlxWU4z39B7JQe4jVlPGrZaDT+Z5kjYMzBnjE9HVGnGR/rW8mDaW4rb0b622mEfcy4Xsf2kfXRu0m8hv7+z0rCUecbGfPdzaPfuIr2lgknh90ex3O0cDEV2VYkaDuyTP38TFtwvLode/JVzv/dSSD6tv9n6wuN69/ilc77sTxO/UBvWlN5jFZXpdW1eRu7SkiX/F3UINvmG5vneiCtz+
+  </data>
+ </layer>
+</map>
