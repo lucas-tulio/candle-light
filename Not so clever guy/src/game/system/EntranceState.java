@@ -34,9 +34,6 @@ public class EntranceState extends BasicGameState {
 	public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException {
 		// Get input
 		input = container.getInput();
-		boolean leftMouse = input.isMousePressed(Input.MOUSE_LEFT_BUTTON);
-		int mouseX = input.getMouseX();
-		int mouseY = input.getMouseY();
 		
 		if(input.isKeyPressed(Input.KEY_W) || input.isKeyPressed(Input.KEY_A) || input.isKeyPressed(Input.KEY_S) || input.isKeyPressed(Input.KEY_D)) {
 			game.getState(GameSystem.MAIN_STATE).init(container, game);

@@ -8,14 +8,12 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Sound;
-import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
 import game.gameplay.Book;
 import game.gameplay.Character;
 import game.gameplay.Enemy;
-import game.gameplay.Light;
 
 public class MainState extends BasicGameState {
 
