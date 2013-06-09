@@ -43,9 +43,8 @@ public class MainState extends BasicGameState {
 	
 	// Sound
 	private Sound piano;
-	private int currentPianoTime;
-	private int pianoInterval;
-	private boolean alreadyPlayedPiano;
+	private boolean playedFirstPiano;
+	private boolean playedSecondPiano;
 	
 	@Override
 	public int getID() {return 3;}
@@ -66,9 +65,8 @@ public class MainState extends BasicGameState {
 		
 		// Sound
 		piano = new Sound("res/sfx/piano.wav");
-		pianoInterval = 10000;
-		alreadyPlayedPiano = false;
-		currentPianoTime = 0;
+		playedFirstPiano = false;
+		playedSecondPiano = false;
 		
 		// Create the Entities
 		character = new Character(27, 27);
@@ -91,19 +89,20 @@ public class MainState extends BasicGameState {
 		// Pass Time. If too much time has passed, reduce light
 		currentTime += delta;
 		if(currentTime >= 120000) {
-			character.getLight().setCurrentImage(0);
+			
+			if(!playedFirstPiano) {
+				playedFirstPiano = true;
+				character.getLight().setCurrentImage(0);
+				piano.play();
+			}
 		}
 		else if(currentTime >= 60000) {
-			character.getLight().setCurrentImage(1);
-		}
-		
-		// Piano sound
-		if(!alreadyPlayedPiano) {
-			currentPianoTime += delta;
-			if(currentPianoTime >= pianoInterval) {
-				alreadyPlayedPiano = true;
-				piano.play();			
-			}	
+			
+			if(!playedSecondPiano) {
+				playedSecondPiano = true;
+				character.getLight().setCurrentImage(1);
+				piano.play();
+			}
 		}
 		
 		// Get Input
