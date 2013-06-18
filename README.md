@@ -9,4 +9,4 @@ This game was my entry to the BaconGameJam05.
 EDIT: now that the jam is finished, the following updates will be applied in the next few days:
 
 - Fix LoS of enemies
-- Improved character movement
+- Improve character movement
