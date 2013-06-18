@@ -6,7 +6,7 @@ The game was created in Java using jwjgl and Slick2D. Map created with Tiled.
 
 This game was my entry to the BaconGameJam05.
 
-EDIT: now the jam is finished, the following updates will be applied in the next few days:
+EDIT: now that the jam is finished, the following updates will be applied in the next few days:
 
 - Fix LoS of enemies
 - Improved character movement
