@@ -146,25 +146,41 @@ public class Enemy extends Entity implements Mover, Collidable {
 				}
 			}
 			
-			// Saw the Player!
+			// Saw the Player
 			if(!crossedWall && detectionLine.length() <= maxDetectionRange && detectionLine.intersects(character.getRectangle())) {
-				readNextStep = true;
-				speed = 0.05f;
-				animationDuration = 100;
-				currentPathStep = 0;	
 				
-				// Max Detection time is reduced so the Enemy can chase better
-				maxDetectionTime = 300;
-				maxIdleTime = 10000;
-				
-				// Play Sound!
-				if(!alreadyPlayedDetectionSound) {
-					alreadyPlayedDetectionSound = true;
-					detectionSound.play();
+				// Only start chasing if the player is in front of it
+				boolean isInFront = false;
+				if       (this.facingDirection == Entity.DOWN && character.getyPos() >= this.getyPos()) {
+					isInFront = true;
+				} else if(this.facingDirection == Entity.UP && character.getyPos() <= this.getyPos()) {
+					isInFront = true;
+				} else if(this.facingDirection == Entity.RIGHT && character.getxPos() >= this.getxPos()) {
+					isInFront = true;
+				} else if(this.facingDirection == Entity.LEFT && character.getxPos() <= this.getxPos()) {
+					isInFront = true;
 				}
 				
-				// Calculate the Path to the Player
-				path = map.getPathFinder().findPath(this, xTile, yTile, character.getxTile(), character.getyTile());
+				// Then we can start chasing the Player
+				if(isInFront) {
+					readNextStep = true;
+					speed = 0.05f;
+					animationDuration = 100;
+					currentPathStep = 0;	
+					
+					// Max Detection time is reduced so the Enemy can chase better
+					maxDetectionTime = 300;
+					maxIdleTime = 10000;
+					
+					// Play Sound!
+					if(!alreadyPlayedDetectionSound) {
+						alreadyPlayedDetectionSound = true;
+						detectionSound.play();
+					}
+					
+					// Calculate the Path to the Player
+					path = map.getPathFinder().findPath(this, xTile, yTile, character.getxTile(), character.getyTile());
+				}
 			}
 		}
 		
