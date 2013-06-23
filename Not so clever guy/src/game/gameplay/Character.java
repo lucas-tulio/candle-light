@@ -15,7 +15,8 @@ import org.newdawn.slick.state.StateBasedGame;
 
 public class Character extends Entity implements Collidable {
 	
-	Light light;		// Light around the Character
+	private Light light;		// Light around the Character
+	private boolean isRunning;	// Character is running or not
 	
 	public Character(int xTile, int yTile) throws SlickException {
 		
@@ -28,8 +29,7 @@ public class Character extends Entity implements Collidable {
 		speed = 0.03f;
 		isMoving = false;
 		isAlive = true;
-		
-		
+		isRunning = false;
 		
 		// Open the Sprite Sheep
 		spriteSheep = new SpriteSheet("res/img/character/bartender alpha.png", 16, 16);
@@ -93,6 +93,14 @@ public class Character extends Entity implements Collidable {
 				
 		// Check input and set movement
 		if(isAlive) {
+			
+			// Run
+			if (input.isKeyDown(Input.KEY_LSHIFT)) {
+				isRunning = true;
+			} else {
+				isRunning = false;
+			}
+			
 			if(input.isKeyDown(Input.KEY_W)) {
 				
 				// Update Facing Direction
@@ -145,6 +153,13 @@ public class Character extends Entity implements Collidable {
 			}
 		}
 		
+		// Update its speed
+		if(isRunning) {
+			speed = 0.07f;
+		} else {
+			speed = 0.03f;
+		}
+		
 		// Update its current x and y Tiles, depending on the x and y Pos
 		xTile = (int)((xPos + image[facingDirection].getWidth() / 2) / 16);
 		yTile = (int)((yPos + image[facingDirection].getHeight() / 2) / 16);
@@ -154,7 +169,6 @@ public class Character extends Entity implements Collidable {
 		
 		// Draw rectangle (debug)
 		//g.draw(rectangle);
-		
 		
 		// Check if it's moving
 		if(isMoving && isAlive) {
@@ -171,9 +185,6 @@ public class Character extends Entity implements Collidable {
 			// Dead!
 			g.drawImage(imageDead, xPos + xOffset, yPos + yOffset);
 		}
-		
-		
-		
 	}
 
 	public Light getLight() {
@@ -182,5 +193,13 @@ public class Character extends Entity implements Collidable {
 
 	public void setLight(Light light) {
 		this.light = light;
-	}	
+	}
+
+	public boolean isRunning() {
+		return isRunning;
+	}
+
+	public void setRunning(boolean isRunning) {
+		this.isRunning = isRunning;
+	}
 }
