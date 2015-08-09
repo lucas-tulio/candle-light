@@ -1,6 +1,6 @@
-# Not so clever guy
+# Reddit Game Jam 5
 
-Created in 48 hours as my entry to the BaconGameJam05, this is a top down 2D stealth game where the goal is to find an special book inside a dungeon.
+Created in 48 hours as my entry to the Reddit Game Jam 5, this is a top down 2D stealth game where the goal is to find an special book inside a dungeon.
 
 Explore the area using WASD to move your character and Shift to run. Avoid getting in the line of sight of enemies by hiding behind walls. The longer you take, the weaker the lights will become, slowly making the game harder.
 
