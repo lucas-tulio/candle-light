@@ -9,7 +9,7 @@ public class Start {
 		
 		try {
 			// Create the App Container
-			AppGameContainer container = new AppGameContainer(new GameSystem("Not so clever guy"));
+			AppGameContainer container = new AppGameContainer(new GameSystem("Candle Light"));
 			
 			// Start shit up
 			container.setDisplayMode(1024, 768, false);

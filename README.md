@@ -1,4 +1,4 @@
-# Reddit Game Jam 5
+# Candle Light
 
 Created in 48 hours as my entry to the Reddit Game Jam 5, this is a top down 2D stealth game where the goal is to find an special book inside a dungeon.
 
@@ -13,7 +13,7 @@ EDIT: now that the jam is finished, the following updates have been made:
 - Improved LoS of enemies
 - Player can now hold down shift to run
 
-## How to run
+## How to run the game
 
 I've included all the necessary lib files inside the project. In order to import and run it in Eclipse, do the following:
 
@@ -21,3 +21,4 @@ I've included all the necessary lib files inside the project. In order to import
 2. Open Eclipse, go to File -> Import -> General -> Existing Projects into Workspace
 3. Select the "maze" project downloaded on step 1
 4. Run the Project
+
